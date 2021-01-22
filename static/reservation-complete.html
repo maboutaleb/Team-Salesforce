@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dining Reservations</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+    <!--Start of Navbar section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fas fa-stroopwafel"></i>Restaurant Name</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/public/index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/public/menu.html" class="navbar__links">Menu</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">About Us</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/public/login.html" class="button">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--End Navbar section-->
+
+    <!--Start of Main page section-->
+    <div class="container__comp">
+        <p>Your Reservation is complete!<br><span>Your reservation number is:</span></p>
+    </div>
+    <!--End of Main page section-->
+
+</body>
+
+</html>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const reservation_id = urlParams.get('reservation_id')
+    document.getElementById('reserve_span').innerHTML = reservation_id
+</script>
