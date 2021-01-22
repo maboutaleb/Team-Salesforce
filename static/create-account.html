@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dining Reservations</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+    <!--Start of Navbar section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fas fa-stroopwafel"></i>Restaurant Name</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/public/index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/public/menu.html" class="navbar__links">Menu</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">About Us</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/public/login.html" class="button">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--End Navbar section-->
+
+    <!--Start of Main page section-->
+    <div class="container__ca">
+        <div class="ca__box">
+            <div class="res__logo-ca"><i class="fas fa-stroopwafel"></i>Restaurant Name</div>
+            <div class="new-cus__box">
+                <p class="new-cus__title">New Customer Registeration</p>
+                <span class="new-cus__text">Please fill out the information below
+                    to register as a new customer!</span>
+            </div>
+
+            <form>
+                <div class="ca-line">
+                    <input type="text" id="full-name" name="firstname" placeholder="First name">
+                    <input type="text" id="full-name" name="lastname" placeholder="Last name">
+                </div>
+                <div class="ca-line">
+                    <input type="text" id="ca-info-box" name="lastname" placeholder="Email">
+                </div>
+                <div class="ca-line">
+                    <input type="text" id="ca-info-box" name="lastname" placeholder="Password">
+                </div>
+                <div class="ca-birthdate">
+                    <div class="top-Tab1">
+                        <ul>
+                            <li>Date:<input type="date" id="date"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ca-line2">
+                    <input type="text" id="ca-admin-box" name="lastname"
+                        placeholder="*If you are not registering as Admin, please ignore this box.">
+                </div>
+
+                <a href="/" class="log__button">Submit</a>
+            </form>
+
+        </div>
+    </div>
+    <!--End of Main page section-->
+
+</body>
+
+</html>
