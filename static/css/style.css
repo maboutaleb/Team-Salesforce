@@ -817,3 +817,51 @@ th, td {
     transition: all 0.5s ease;
 }
 /* End of menu /////////////////////////////////////////////////////////////// */
+
+
+
+	/* HIDE RADIO */
+    [type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+        
+        /* IMAGE STYLES */
+        [type=radio] + img {
+        cursor: pointer;
+        }
+        
+        /* CHECKED STYLES */
+        [type=radio]:checked + img {
+        outline: 2px solid #f00;
+        }
+        
+        
+        .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        }
+        
+        .alert2 {
+        padding: 20px;
+        background-color: #0b8f4d;
+        color: white;
+        }
+        
+        .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+        color: black;
+        }

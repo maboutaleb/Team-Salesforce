@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+		integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+		crossorigin="anonymous">
+        </script>
+    
 </head>
 
 <body>
@@ -44,7 +50,7 @@
 
     <div class="container__bottom">
         <div class="container__flex">
-            <a href="/public/reservation.html" style="text-decoration:none;"><i class="fas fa-chair"></i>Dine in</a>
+            <a href="/public/reservation.html" style="text-decoration:none;" id="dineIn"><i class="fas fa-chair"></i>Dine in</a>
         </div>
         <div class="container__flex">
             <a href="/public/menu.html" style="text-decoration:none;"><i class="fas fa-car-side"></i>Order To-Go</a>
@@ -55,3 +61,19 @@
 </body>
 
 </html>
+
+<script>
+ $(document).ready(function () {
+    (async function() {
+        let url= `http://127.0.0.1:3000/statuses`
+        const {data}=await axios.get(url)
+
+        if(data[0].status==4){  
+            
+            $('#dineIn').removeAttr("href");
+            $('#dineIn').css("text-decoration","line-through");
+        }
+    })();
+ })
+
+</script>

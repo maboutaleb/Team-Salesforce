@@ -33,6 +33,12 @@ app.use('/orders', orderRoutes);
 
 const authRoute = require('./routes/auth');
 
+const postsReservation = require('./routes/reservations');
+app.use('/reservations',postsReservation);
+
+const seatsRoutes=require('./routes/seats')
+app.use('/seats',seatsRoutes)
+
 app.use('/api/user', authRoute);
 app.use('/api/posts', postRoute);
 
